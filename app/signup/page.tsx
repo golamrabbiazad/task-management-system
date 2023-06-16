@@ -4,14 +4,15 @@ import { Command } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
-import { UserAuthForm } from "@/components/user-auth-form"
+
+import { UserSignUpForm } from "./components/user-signup-form"
 
 export const metadata: Metadata = {
-  title: "Authentication",
-  description: "Authentication Forms.",
+  title: "Sign Up",
+  description: "Sign Up Forms.",
 }
 
-export default function AuthenticationPage() {
+export default function SignUpPage() {
   return (
     <>
       <div className="container relative hidden h-[800px] flex-col items-center justify-center xs:grid sm:grid md:grid lg:max-w-none lg:grid-cols-2 lg:px-0">
@@ -53,10 +54,10 @@ export default function AuthenticationPage() {
                 Create an account
               </h1>
               <p className="text-sm text-muted-foreground">
-                Enter your email and password below to create your account
+                Enter your email below to create your account
               </p>
             </div>
-            <UserAuthForm />
+            <UserSignUpForm />
             <p className="px-8 text-center text-sm text-muted-foreground">
               By clicking continue, you agree to our{" "}
               <Link
