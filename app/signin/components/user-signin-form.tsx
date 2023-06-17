@@ -64,8 +64,11 @@ export function UserSignInForm({
     )
 
     // typecheck for the user is to be undefined or not.
-    if (typeof user === "undefined") {
-      console.log("user not found")
+    if (user === undefined) {
+      form.setError("root", {
+        type: "custom",
+        message: "Email or Password miss match.",
+      })
     }
 
     // create sessions for this user.
@@ -106,6 +109,11 @@ export function UserSignInForm({
               </FormItem>
             )}
           />
+          {form.formState.errors.root && (
+            <div className="space-y-2 text-destructive">
+              {form.formState.errors.root.message}
+            </div>
+          )}
           <Button className="w-full" type="submit">
             {isLoading && (
               <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
