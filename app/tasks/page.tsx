@@ -1,7 +1,10 @@
 import { promises as fs } from "fs"
 import path from "path"
 import { Metadata } from "next"
+import Link from "next/link"
 import { z } from "zod"
+
+import { Button } from "@/components/ui/button"
 
 import { columns } from "./components/columns"
 import { DataTable } from "./components/data-table"
@@ -38,6 +41,9 @@ export default async function TaskPage() {
             </p>
           </div>
           <div className="flex items-center space-x-2">
+            <Button variant="outline">
+              <Link href={"/tasks/new"}>New</Link>
+            </Button>
             <UserNav />
           </div>
         </div>

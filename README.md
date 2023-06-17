@@ -36,8 +36,8 @@ Dashboard:
 
 Task Creation and Assignment:
 
-- Implement a form to create new tasks with fields like task name, description, due date, and assignee.
-- Validate form input and display appropriate error messages for invalid data.
+- ✅ Implement a form to create new tasks with fields like task name, description, due date, and assignee.
+- ✅ Validate form input and display appropriate error messages for invalid data.
 
 Task Details and Comments:
 
